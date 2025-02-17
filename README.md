@@ -28,17 +28,7 @@ The switching between dice happens with probabilities:
 
 ## Usage
 
-```python
-# Create casino simulation
-casino = UnfairCasino(fair_probabilities, cheat_probabilities, 
-                     fair_to_cheat=0.05, cheat_to_fair=0.1)
+change number of sequences in main function, and then:
 
-# Generate sequence
-rolls, true_states = casino.generate_sequence(n_rolls)
-
-# Predict states using different algorithms
-viterbi_states = casino.viterbi(rolls)
-fb_states = casino.forward_backward(rolls)
-
-# Estimate parameters
-estimated_transition, estimated_emission = casino.baum_welch(rolls, true_states)
+```bash
+python3 unfrair_casino_sim.py
